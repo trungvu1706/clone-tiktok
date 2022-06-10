@@ -1,8 +1,17 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
 
+:root {
+  --default-layout-header: 60px;
+}
+
 html {
   font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
