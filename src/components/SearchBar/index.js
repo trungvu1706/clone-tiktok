@@ -1,5 +1,4 @@
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { SearchIcon } from '@heroicons/react/solid';
 import classNames from 'classnames/bind';
 
 import React from 'react';
@@ -12,14 +11,14 @@ const SearchBar = () => {
     <div className={cx('input-wrapper')}>
       <input
         className={cx('input-inner')}
-        placeholder="Search account and video..."
+        placeholder="Search account and video"
       />
 
-      <div>
-        <button>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-        </button>
-      </div>
+      <span className={cx('border')}></span>
+
+      <button className={cx('search-btn')}>
+        <SearchIcon width={24} height={24} />
+      </button>
     </div>
   );
 };
