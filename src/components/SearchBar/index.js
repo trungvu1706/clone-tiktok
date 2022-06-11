@@ -12,7 +12,7 @@ const SearchBar = () => {
     <div className={cx('input-wrapper')}>
       <input
         className={cx('input-inner')}
-        placeholder="Search account and video"
+        placeholder="Search account and video..."
       />
 
       <div>
