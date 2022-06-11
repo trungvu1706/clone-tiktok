@@ -3,6 +3,8 @@
 
 :root {
   --default-layout-header: 60px;
+  --black: #000000;
+  --red: rgba(254, 44, 85, 1);
 }
 
 html {
@@ -19,4 +21,10 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
 }
