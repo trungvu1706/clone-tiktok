@@ -49,9 +49,13 @@
   }
 }
 
-.border {
+.search-border {
   width: 1px;
   height: 28px;
   margin: -3px 16px -3px 0;
   background: rgba(22, 24, 35, 0.12);
+}
+
+.search-pop-up-wrapper {
+  min-width: var(--input-width);
 }
