@@ -4,7 +4,8 @@
 :root {
   --default-layout-header: 60px;
   --black: #000000;
-  --red: rgba(254, 44, 85, 1);
+  --white: rgba(255, 255, 255, 1);
+  --primary: rgba(254, 44, 85, 1);
   --input-width: 361px;
 }
 
@@ -28,4 +29,9 @@ button,
 input {
   border: none;
   outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
 }

@@ -1,10 +1,10 @@
-import { SearchIcon } from '@heroicons/react/solid';
+import { SearchIcon } from '@heroicons/react/outline';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 
 import React, { useState } from 'react';
 import styles from './SearchBar.module.scss';
-import Popup from '../Popup';
+import SearchBarPopup from '../SearchBarPopup';
 
 const cx = classNames.bind(styles);
 
@@ -20,7 +20,7 @@ const SearchBar = () => {
       visible={value.length > 0}
       render={(attrs) => (
         <div className={cx('search-pop-up-wrapper')} tabIndex="-1" {...attrs}>
-          <Popup />
+          <SearchBarPopup />
         </div>
       )}
     >

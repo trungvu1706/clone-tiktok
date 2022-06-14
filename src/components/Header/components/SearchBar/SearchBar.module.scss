@@ -21,7 +21,7 @@
   font-size: 16px;
   background: transparent;
   color: var(--black);
-  caret-color: var(--red);
+  caret-color: var(--primary);
 
   &:not(:placeholder-shown) ~ .search-btn {
     color: rgba(22, 24, 35, 0.75);

@@ -3,7 +3,8 @@ import classNames from 'classnames/bind';
 import React from 'react';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import SearchBar from '../SearchBar';
+import SearchBar from './components/SearchBar';
+import Button from '~/components/Button';
 
 let cx = classNames.bind(styles);
 
@@ -16,7 +17,7 @@ const Header = () => {
           <SearchBar />
         </div>
         <div className={cx('icon-container')}>
-          <h1>icon-account</h1>
+          <Button primary>Login</Button>
         </div>
       </div>
     </header>

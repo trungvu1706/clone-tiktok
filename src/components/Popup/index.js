@@ -1,25 +1,16 @@
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
 import styles from './Popup.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Popup = () => {
-  return (
-    <div className={cx('pop-up-wrapper')}>
-      <div className={cx('pop-up-title')}>Account</div>
-      <div className={cx('pop-up-content')}>
-        <span className={cx('pop-up-avatar')}>
-          <img alt="avatar" />
-        </span>
+const Popup = ({ children }) => {
+  return <div className={cx('pop-up-wrapper')}>{children}</div>;
+};
 
-        <div className={cx('pop-up-details')}>
-          <h4 className={cx('pop-up-description__title')}>user name</h4>
-          <p className={cx('pop-up-details__description')}>description</p>
-        </div>
-      </div>
-    </div>
-  );
+Popup.propTypes = {
+  children: PropTypes.node,
 };
 
 export default Popup;
