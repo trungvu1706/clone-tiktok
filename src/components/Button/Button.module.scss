@@ -1,0 +1,89 @@
+.btn-wrapper {
+  min-width: 100px;
+  padding: 6px 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  + .btn-wrapper {
+    margin-left: 16px;
+  }
+
+  &.disabled {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+// button types
+.container {
+  &:hover {
+    background-color: var(--grey);
+  }
+}
+
+.outlined {
+  color: var(--primary);
+  border-color: var(--primary);
+  background-color: var(--white);
+
+  &:hover {
+    background-color: rgba(254, 44, 85, 0.06);
+  }
+}
+
+.rounded {
+  background-color: var(--white);
+  border-radius: 52px;
+  padding: 4px 8px;
+  border-color: var(--grey-2);
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.2);
+    background-color: var(--grey);
+  }
+}
+
+// if button is an 'a' tag
+
+.btn-link {
+  border-color: var(--grey-2);
+}
+
+// button colors
+
+.primary {
+  background-color: var(--primary);
+  color: rgba(255, 255, 255, 1);
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      #fe2c55;
+  }
+}
+
+.default {
+  border-color: var(--grey-2);
+  color: var(--black);
+
+  &:hover {
+    background-color: var(--grey);
+  }
+}
+
+// button sizes
+
+.btn-size-s {
+  padding: 2px 10px;
+  font-weight: 600;
+  font-family: ProximaNova, PingFangSC, sans-serif;
+}
+
+.btn-size-l {
+  @extend .btn-wrapper;
+  width: 100%;
+}
