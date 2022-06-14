@@ -16,6 +16,6 @@
 
 .search-bar {
   display: flex;
-  width: 362px;
+  width: var(--input-width);
   height: 46px;
 }
