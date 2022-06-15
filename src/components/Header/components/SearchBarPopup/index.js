@@ -2,7 +2,6 @@ import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
 import React from 'react';
-import Popup from '~/components/Popup';
 import images from '~/assets/images';
 import styles from './SearchBarPopup.module.scss';
 
@@ -10,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const SearchBarPopup = ({ avatar, userName, description }) => {
   return (
-    <Popup>
+    <div className={cx('SB-pop-up-wrapper')}>
       <div className={cx('SB-pop-up-title')}>Accounts</div>
       <div className={cx('SB-pop-up-content')}>
         <span className={cx('SB-pop-up-avatar')}>
@@ -26,7 +25,7 @@ const SearchBarPopup = ({ avatar, userName, description }) => {
           </p>
         </div>
       </div>
-    </Popup>
+    </div>
   );
 };
 
