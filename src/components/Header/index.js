@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { PlusSmIcon } from '@heroicons/react/solid';
 
 import React from 'react';
 import styles from './Header.module.scss';
@@ -16,8 +17,11 @@ const Header = () => {
         <div className={cx('search-bar')}>
           <SearchBar />
         </div>
-        <div className={cx('icon-container')}>
-          <Button className={cx('btn-color-text')}>Login</Button>
+        <div className={cx('btn-group')}>
+          <Button variant="outlined" startIcon={<PlusSmIcon />}>
+            Upload
+          </Button>
+          <Button color="primary">Login</Button>
         </div>
       </div>
     </header>

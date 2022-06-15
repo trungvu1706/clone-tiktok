@@ -16,6 +16,9 @@ const Button = (props) => {
     disabled,
     color = 'default',
     className,
+    startIcon,
+    endIcon,
+    ...rest
   } = props;
 
   let Btn = 'button';
@@ -37,8 +40,10 @@ const Button = (props) => {
   });
 
   return (
-    <Btn className={classes} disabled={disabled} {...props}>
-      <span>{children}</span>
+    <Btn className={classes} disabled={disabled} {...rest}>
+      {startIcon && <span className={cx('start-icon')}>{startIcon}</span>}
+      <span className={cx('btn-label')}>{children}</span>
+      {endIcon && <span className={cx('end-icon')}>{endIcon}</span>}
     </Btn>
   );
 };
@@ -51,6 +56,8 @@ Button.propTypes = {
   color: PropTypes.string,
   variant: PropTypes.string,
   className: PropTypes.string,
+  startIcon: PropTypes.node,
+  endIcon: PropTypes.node,
 };
 
 export default Button;

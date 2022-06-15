@@ -20,6 +20,7 @@
   height: 46px;
 }
 
-.btn-color-text {
-  color: rgba(22, 24, 35, 0.75);
+.btn-group {
+  display: flex;
+  align-items: center;
 }

@@ -1,4 +1,7 @@
 .btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 100px;
   padding: 6px 8px;
   font-weight: 700;
@@ -19,6 +22,22 @@
   }
 }
 
+// button with icon
+.start-icon + .btn-label,
+.btn-label + .end-icon {
+  margin-left: 8px;
+}
+
+.start-icon,
+.end-icon {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 // button types
 .container {
   &:hover {
@@ -27,7 +46,7 @@
 }
 
 .outlined {
-  color: var(--primary);
+  font-weight: 600;
   border-color: var(--primary);
   background-color: var(--white);
 
