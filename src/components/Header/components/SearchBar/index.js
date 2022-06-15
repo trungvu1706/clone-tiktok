@@ -1,10 +1,10 @@
 import { SearchIcon } from '@heroicons/react/outline';
 import classNames from 'classnames/bind';
-import Tippy from '@tippyjs/react/headless';
 
 import React, { useState } from 'react';
 import styles from './SearchBar.module.scss';
 import SearchBarPopup from '../SearchBarPopup';
+import Popup from '~/components/Popup';
 
 const cx = classNames.bind(styles);
 
@@ -16,13 +16,10 @@ const SearchBar = () => {
   };
 
   return (
-    <Tippy
+    <Popup
       visible={value.length > 0}
-      render={(attrs) => (
-        <div className={cx('search-pop-up-wrapper')} tabIndex="-1" {...attrs}>
-          <SearchBarPopup />
-        </div>
-      )}
+      content={<SearchBarPopup />}
+      className={cx('pop-up-min-width')}
     >
       <div className={cx('input-wrapper')}>
         <input
@@ -36,7 +33,7 @@ const SearchBar = () => {
           <SearchIcon width={24} height={24} />
         </button>
       </div>
-    </Tippy>
+    </Popup>
   );
 };
 
