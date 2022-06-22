@@ -3,7 +3,7 @@
 
 :root {
   --default-layout-header: 60px;
-  --black: #000000;
+  --black: #161823;
   --white: rgba(255, 255, 255, 1);
   --primary: rgba(254, 44, 85, 1);
   --grey: rgba(22, 24, 35, 0.03);
@@ -36,4 +36,22 @@ input {
 a {
   text-decoration: none;
   color: var(--black);
+}
+
+.tippy-box {
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  background: rgba(84, 84, 84, 0.92);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+}
+
+.tippy-box[data-placement^='bottom'] > .tippy-arrow {
+  color: rgba(84, 84, 84, 0.92);
+
+  &::before {
+    top: -8px;
+  }
 }

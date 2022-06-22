@@ -23,4 +23,25 @@
 .btn-group {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+
+  .message-btn {
+    transform: rotate(62deg);
+    margin-left: 16px;
+    padding: 3px 3px 10px;
+    height: 32px;
+  }
+
+  .inbox-btn {
+    background: transparent;
+    cursor: pointer;
+    margin-left: 16px;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    vertical-align: bottom;
+  }
 }
