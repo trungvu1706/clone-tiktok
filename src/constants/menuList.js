@@ -1,4 +1,3 @@
-import { KeyIcon, QuestionMarkCircleIcon } from '@heroicons/react/outline';
 import images from '~/assets/images';
 import Image from '~/components/Image';
 
@@ -22,11 +21,11 @@ export const MENU_LIST = [
   },
   {
     title: 'Feedback and help',
-    icon: <QuestionMarkCircleIcon />,
+    icon: <Image src={images.feedback} />,
     pathName: '/feedback',
   },
   {
     title: 'Keyboard shortcuts',
-    icon: <KeyIcon />,
+    icon: <Image src={images.keyboard} />,
   },
 ];

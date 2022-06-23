@@ -8,6 +8,7 @@ const images = {
   feedback: require('~/assets/images/feedback.svg').default,
   keyboard: require('~/assets/images/keyboard.svg').default,
   logout: require('~/assets/images/logout.svg').default,
+  noImage: require('~/assets/images/noImage.svg').default,
 };
 
 export default images;

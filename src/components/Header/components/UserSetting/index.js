@@ -26,16 +26,13 @@ const UserSetting = () => {
 
   return (
     <Popup
-      visible
+      interactive
+      delay={[0, 700]}
       content={renderContents}
       placement="bottom-end"
       className={cx('user-setting-wrapper')}
     >
-      <Image
-        className={cx('user-header-avatar')}
-        src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/5f622e8b62b2de4531e82fa217619193.jpeg?x-expires=1655823600&amp;x-signature=A0m78DG8f%2BMH%2FXSTTrlteHXD5oY%3D"
-        alt="avatar"
-      />
+      <Image className={cx('user-header-avatar')} alt="avatar" />
     </Popup>
   );
 };
