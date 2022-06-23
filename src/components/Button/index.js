@@ -18,6 +18,7 @@ const Button = (props) => {
     className,
     startIcon,
     endIcon,
+    onClick,
     ...rest
   } = props;
 
@@ -40,7 +41,14 @@ const Button = (props) => {
   });
 
   return (
-    <Btn className={classes} disabled={disabled} {...rest}>
+    <Btn
+      className={classes}
+      disabled={disabled}
+      to={to}
+      href={href}
+      onClick={onClick}
+      {...rest}
+    >
       {startIcon && <span className={cx('start-icon')}>{startIcon}</span>}
       <span className={cx('btn-label')}>{children}</span>
       {endIcon && <span className={cx('end-icon')}>{endIcon}</span>}

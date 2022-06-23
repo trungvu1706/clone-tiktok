@@ -55,6 +55,15 @@
   }
 }
 
+.text {
+  border: none;
+  background: transparent;
+
+  &:hover {
+    background: var(--grey);
+  }
+}
+
 .rounded {
   background-color: var(--white);
   border-radius: 52px;
