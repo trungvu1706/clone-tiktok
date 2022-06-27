@@ -9,7 +9,7 @@ const publicRoutes = [
     component: HomePage,
   },
   {
-    path: '/profile',
+    path: '/@:nickname',
     component: Profile,
   },
   {

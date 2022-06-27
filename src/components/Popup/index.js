@@ -18,6 +18,7 @@ const Popup = ({
   onBack,
   placement,
   interactive,
+  onClickOutside = () => {},
   onHide = () => {},
   ...rest
 }) => {
@@ -31,6 +32,7 @@ const Popup = ({
       delay={delay}
       placement={placement}
       onHide={onHide}
+      onClickOutside={onClickOutside}
       render={(attrs) => (
         <div className={cx('pop-up-wrapper')} tabIndex="-1" {...attrs}>
           {hasHeaderWithBtnBack && (
@@ -60,6 +62,8 @@ Popup.propTypes = {
   placement: PropTypes.string,
   interactive: PropTypes.bool,
   onHide: PropTypes.func,
+  onClickOutside: PropTypes.func,
+  // hideOnClick: PropTypes.func,
 };
 
 export default Popup;

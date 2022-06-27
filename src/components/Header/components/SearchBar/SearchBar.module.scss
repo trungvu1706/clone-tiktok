@@ -63,3 +63,35 @@
 .pop-up-min-width {
   min-width: 361px;
 }
+
+// icon
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+  cursor: pointer;
+
+  .loading {
+    width: 16px;
+    height: 16px;
+    animation: spinner 1s linear infinite;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: rgba(22, 24, 35, 0.34);
+    vertical-align: middle;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
