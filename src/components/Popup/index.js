@@ -9,6 +9,7 @@ const cx = classNames.bind(styles);
 
 const Popup = ({
   children,
+  hideOnClick,
   content,
   visible,
   className,
@@ -25,6 +26,7 @@ const Popup = ({
   const classes = cx('pop-up-content', {
     [className]: className,
   });
+
   return (
     <Tippy
       interactive={interactive}
@@ -33,6 +35,7 @@ const Popup = ({
       placement={placement}
       onHide={onHide}
       onClickOutside={onClickOutside}
+      hideOnClick={hideOnClick}
       render={(attrs) => (
         <div className={cx('pop-up-wrapper')} tabIndex="-1" {...attrs}>
           {hasHeaderWithBtnBack && (

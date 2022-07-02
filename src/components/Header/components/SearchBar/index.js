@@ -48,7 +48,10 @@ const SearchBar = () => {
   const inputRef = useRef();
 
   const onChange = (e) => {
-    setValue(e.target.value);
+    const { value } = e.target;
+
+    if (value.startsWith(' ')) return;
+    setValue(value);
   };
 
   const handleClearText = () => {
@@ -66,6 +69,11 @@ const SearchBar = () => {
     setIsShowResult(false);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    inputRef.current.blur();
+  };
+
   return (
     <Popup
       interactive
@@ -80,7 +88,7 @@ const SearchBar = () => {
           value={value}
           onChange={onChange}
           className={cx('input-inner')}
-          placeholder="Search account and video"
+          placeholder="Search accounts and videos"
           onFocus={() => setIsShowResult(true)}
           onKeyDown={handleOnKeydown}
         />
@@ -95,7 +103,11 @@ const SearchBar = () => {
           )}
         </div>
         <span className={cx('search-border')}></span>
-        <button className={cx('search-btn')}>
+        <button
+          className={cx('search-btn')}
+          onClick={handleSubmit}
+          onMouseDown={(e) => e.preventDefault()}
+        >
           <SearchIcon width={24} height={24} />
         </button>
       </div>
