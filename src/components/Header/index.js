@@ -13,7 +13,7 @@ import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Header = ({ currentUser = false }) => {
+const Header = ({ currentUser = true }) => {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('container')}>

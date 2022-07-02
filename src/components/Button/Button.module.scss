@@ -4,6 +4,7 @@
   justify-content: center;
   min-width: 100px;
   padding: 6px 8px;
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -108,7 +109,6 @@
 .btn-size-s {
   padding: 2px 10px;
   font-weight: 600;
-  font-family: ProximaNova, PingFangSC, sans-serif;
 }
 
 .btn-size-l {

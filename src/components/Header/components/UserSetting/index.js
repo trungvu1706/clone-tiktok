@@ -29,6 +29,7 @@ const UserSetting = () => {
       interactive
       delay={[0, 700]}
       content={renderContents}
+      hideOnClick={false}
       placement="bottom-end"
       className={cx('user-setting-wrapper')}
     >
