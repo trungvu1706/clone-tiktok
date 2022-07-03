@@ -56,8 +56,8 @@ const Popup = ({
 };
 
 Popup.propTypes = {
-  children: PropTypes.node,
-  content: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  content: PropTypes.node.isRequired,
   visible: PropTypes.bool,
   delay: PropTypes.array,
   headerWithBtnBackTitle: PropTypes.string,
@@ -66,7 +66,7 @@ Popup.propTypes = {
   interactive: PropTypes.bool,
   onHide: PropTypes.func,
   onClickOutside: PropTypes.func,
-  // hideOnClick: PropTypes.func,
+  hideOnClick: PropTypes.bool,
 };
 
 export default Popup;

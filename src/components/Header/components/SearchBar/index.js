@@ -32,7 +32,7 @@ const SearchBar = () => {
       try {
         setIsLoading(true);
 
-        const res = await userApi.getUserList(params);
+        const res = await userApi.searchUserList(params);
         setSearchResult(res.data);
 
         setIsLoading(false);
