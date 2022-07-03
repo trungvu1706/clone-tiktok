@@ -19,14 +19,14 @@ const SearchBar = () => {
   const [isShowResult, setIsShowResult] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-  const debounce = useDebounce(value, 500);
+  const debouncedValue = useDebounce(value, 500);
 
   useEffect(() => {
-    if (debounce === '') return;
+    if (debouncedValue === '') return;
 
     const fetchData = async () => {
       const params = {
-        q: debounce,
+        q: debouncedValue,
         type: 'less',
       };
       try {
@@ -43,7 +43,7 @@ const SearchBar = () => {
     };
 
     fetchData();
-  }, [debounce]);
+  }, [debouncedValue]);
 
   const inputRef = useRef();
 
@@ -78,7 +78,12 @@ const SearchBar = () => {
     <Popup
       interactive
       visible={value.length > 0 && isShowResult}
-      content={<SearchBarPopup dataList={searchResult} />}
+      content={
+        <SearchBarPopup
+          dataList={searchResult}
+          setIsShowResult={setIsShowResult}
+        />
+      }
       className={cx('pop-up-min-width')}
       onClickOutside={onClickOutside}
     >
