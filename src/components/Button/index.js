@@ -57,7 +57,7 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   to: PropTypes.string,
   href: PropTypes.string,
   size: PropTypes.string,
@@ -66,6 +66,8 @@ Button.propTypes = {
   className: PropTypes.string,
   startIcon: PropTypes.node,
   endIcon: PropTypes.node,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 export default Button;
