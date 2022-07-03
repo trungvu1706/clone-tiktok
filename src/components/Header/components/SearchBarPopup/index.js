@@ -1,20 +1,25 @@
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import React from 'react';
 import Image from '~/components/Image';
 import styles from './SearchBarPopup.module.scss';
 
 const cx = classNames.bind(styles);
 
-const SearchBarPopup = ({ dataList = [] }) => {
+const SearchBarPopup = ({ dataList = [], setIsShowResult }) => {
+  const navigate = useNavigate();
+
+  const handleGoDetailPage = (data) => {
+    navigate(`/@${data.nickname}`);
+    setIsShowResult(false);
+  };
   return (
     <div className={cx('SB-pop-up-wrapper')}>
       <div className={cx('SB-pop-up-title')}>Accounts</div>
       {dataList.map((data) => (
-        <Link
-          to={`/@${data.nickname}`}
+        <div
+          onClick={() => handleGoDetailPage(data)}
           className={cx('SB-pop-up-content')}
           key={data.id}
         >
@@ -30,7 +35,7 @@ const SearchBarPopup = ({ dataList = [] }) => {
               {data.nickname}
             </p>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -38,6 +43,7 @@ const SearchBarPopup = ({ dataList = [] }) => {
 
 SearchBarPopup.propTypes = {
   dataList: PropTypes.array.isRequired,
+  setIsShowResult: PropTypes.func,
 };
 
 export default SearchBarPopup;
